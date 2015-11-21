@@ -152,14 +152,23 @@ function find_chars(string1, string2) {
 // Do not have indepth knowledge of Angular.js with Pouchdb but can learn on the fly
 // Based on my study on it, i was able to come up with this codes...
 
-//include pouchDB plugin to your App
+//include pouchDB plugin to your App frontEnd Design
+/*
 <script src="pouchdb-nightly.min.js"></script>
+<form id="addTestForm" method="post" action="">
+	<input id="name" name="name" type="text" value="" />
+	<input id="addName" name="addName" type="submit" value="Add Name" />
+</form>
+*/
 
-//instantiate database schema
+//instantiate database schema which creates _pouch_pouchtest
 var pdb = new PouchDB('pouchtest');
 
 var form, addName;
-form = document.getElementById('addTestFormId');
+
+//get form fields value by their ID of the submited form
+form = document.getElementById('addTestForm');
+
 addName = function(event) {
 	var t = {};
 	
@@ -185,3 +194,4 @@ addName = function(event) {
 
 //Add an event handler
 form.addEventListener('submit', addName);
+
