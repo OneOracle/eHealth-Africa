@@ -181,7 +181,7 @@ addName = function(event) {
 		t._id = event.target._id.value;
 	}
 	
-	pdb.put(o, function(error, response) {
+	pdb.put(t, function(error, response) {
 		if (error) {
 			console.log(error);
 			return;
@@ -195,3 +195,4 @@ addName = function(event) {
 //Add an event handler
 form.addEventListener('submit', addName);
 
+//add Jasmine and Karma via the frontEnd Design
